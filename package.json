@@ -10,11 +10,11 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_USER_NAME/juicebox.git"
+    "url": "git+https://github.com/andyouf/juicebox.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USER_NAME/juicebox/issues"
+    "url": "https://github.com/andyouf/juicebox/issues"
   },
-  "homepage": "https://github.com/YOUR_USER_NAME/juicebox#readme",
+  "homepage": "https://github.com/andyouf/juicebox#readme",
   "description": ""
 }
