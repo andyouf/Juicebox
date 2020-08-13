@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed:dev": "nodemon ./db/seed.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "AO",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/andyouf/juicebox.git"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "pg": "^8.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
