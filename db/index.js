@@ -1,7 +1,7 @@
 //provide the utility functions that the rest of our application will use
-// listen for defined paths from front end ajax reuests
+// listen for defined paths from front end ajax requests
 //*puts file on live reload so we can listen to chnages
-//can directly manipulate our database instead of going to postgress
+//can directly manipulate our database instead of going to postgres
 const { Client } = require('pg'); // imports the pg module
 
 // supply the db name and location of the database
