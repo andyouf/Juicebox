@@ -14,7 +14,7 @@ const {
     getPostsByTagName
 } = require('./index');
 
-// calls a query which drops all tables from our database
+// calls a query which drops all tables from database
 async function dropTables() {
     try {
         console.log("Starting to drop tables...");
@@ -34,7 +34,7 @@ async function dropTables() {
     }
 }
 
-// call a query which creates all tables for our database 
+// call a query which creates all tables for database 
 async function createTables() {
     try {
         console.log("Starting to build tables...");

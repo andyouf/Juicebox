@@ -1,7 +1,7 @@
-//provide the utility functions that the rest of our application will use
-// listen for defined paths from front end ajax requests
-//*puts file on live reload so we can listen to chnages
-//can directly manipulate our database instead of going to postgres
+//provide the utility functions that the rest of application will use
+//listen for defined paths from front end Ajax requests
+//puts file on live reload so can listen to chnages
+//can directly manipulate database instead of going to postgres
 const { Client } = require('pg'); // imports the pg module
 
 // supply the db name and location of the database
@@ -47,8 +47,6 @@ async function createUser({
 //       throw error;
 //     }
 //   }
-
-
 
 async function updateUser(id, fields = {}) {
     // build the set string
@@ -193,6 +191,7 @@ async function updatePost(postId, fields = {}) {
         throw error;
     }
 }
+
 // get associated information (tags and author) on each post
 async function getAllPosts() {
     try {
@@ -226,7 +225,7 @@ async function getPostById(postId) {
         JOIN post_tags ON tags.id=post_tags."tagId"
         WHERE post_tags."postId"=$1;
       `, [postId])
-        // add tags and author to post befire returning it
+        // add tags and author to post before returning it
         const { rows: [author] } = await client.query(`
         SELECT id, username, name, location
         FROM users
@@ -335,7 +334,7 @@ async function createPostTag(postId, tagId) {
         throw error;
     }
 }
-// the function createPostTag is async, so it returns a promise. That means if we make an array of non-await calls, we can use them with Promise.all, and then await that
+// the function createPostTag is async, so it returns a promise so if we make an array of non-await calls, we can use them with Promise.all, and then await that
 async function addTagsToPost(postId, tagList) {
     try {
         const createPostTagPromises = tagList.map(
