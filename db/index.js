@@ -121,7 +121,7 @@ async function getUserById(userId) {
  */
 
 // use placeholders, and pass the values as the second argument of query
-//# of items in tag list being passed into function
+// # of items in tag list being passed into function
 async function createPost({
     authorId,
     title,
