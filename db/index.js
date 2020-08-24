@@ -211,7 +211,7 @@ async function getAllPosts() {
 }
 
 async function getPostById(postId) {
-    // getting post itself then tages using JOIN stmt
+    // getting post itself then tags using JOIN stmt
     try {
         const { rows: [post] } = await client.query(`
         SELECT *
